@@ -5,8 +5,8 @@ Prompt engineering, at its core, is the practice of designing effective instruct
 ## 1. Be Clear, Direct, and Specific
 
 The most fundamental principle is to eliminate ambiguity. Models like Claude perform best when instructions are direct and detailed. Instead of telling the model what not to do, it is more effective to provide affirmative instructions on what it should do.
-Ineffective (Vague): "Summarize the attached text."
-Effective (Specific): "Summarize the attached article in three bullet points, focusing on its financial implications. The target audience is a group of senior executives."
+- **Ineffective (Vague):** "Summarize the attached text."
+- **Effective (Specific):** "Summarize the attached article in three bullet points, focusing on its financial implications. The target audience is a group of senior executives."
 
 ## 2. Use XML Tags to Structure the Prompt
 
@@ -40,16 +40,16 @@ This makes the model's reasoning process transparent and forces a more deliberat
 
 One of the most powerful ways to guide a model is to provide examples of the desired output format and content. Providing three to five high-quality, relevant examples (a technique known as "few-shot prompting") helps the model understand patterns and replicate them accurately.
 Example: "Extract the company name and product from the following sentences. Follow the JSON format of the examples.
-Example 1:
-Text: "Innovate Inc. just launched the new TurboWidget."
-JSON: {"company": "Innovate Inc.", "product": "TurboWidget"}
-Text to analyze: ..."
+- **Example 1:**
+  - Text: "Innovate Inc. just launched the new TurboWidget."
+  - JSON: {"company": "Innovate Inc.", "product": "TurboWidget"}
+  - Text to analyze: ..."
 
 ## 6. Prefill the Model's Response
 
 Claude models can sometimes be "chatty," adding conversational filler before getting to the point (e.g., "Certainly, here is the summary you requested..."). To get a direct, clean output, you can use the Assistant turn to provide the very beginning of the expected response. This forces the model to continue directly from your provided text.
-User Prompt: ...Please provide the summary as a bulleted list.
-Assistant Prefill: *
+- **User Prompt:** ...Please provide the summary as a bulleted list.
+- **Assistant Prefill:** *
 By prefilling the first bullet point, you ensure the model's response begins immediately with the list, adhering strictly to the requested format.
 
 By combining these core techniques, a prompt engineer transforms a simple request into a robust, structured, and context-rich briefing that enables the AI to function as a reliable and highly specialized tool.
