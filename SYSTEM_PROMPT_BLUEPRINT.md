@@ -78,12 +78,14 @@ This section provides a universal template for constructing such prompts. It is 
 # --- END EXAMPLE ---
 ```
 
-Anatomy of the Blueprint
+### Anatomy of the Blueprint
+
 Each section of the template serves a critical function rooted in established prompt engineering best practices.
-1. ROLE & MISSION: This is the foundation. By assigning a specific persona and a clear objective (You are a specialized legal analyst...), you move the AI from a generalist model to a focused specialist. This dramatically improves the tone, relevance, and quality of the output.
-2. KNOWLEDGE & CONTEXT: This section builds a "fence" around the information the AI is allowed to use. Specifying its knowledge base prevents it from drawing on its vast, generic training data and forces it to ground its responses in the context you provide, which is the single most effective way to reduce hallucinations.
-3. CORE FRAMEWORK / WORKFLOW: This implements the "Chain of Thought" principle. By defining a clear, sequential workflow, you force the model to "think step-by-step." This breaks down complex tasks into manageable chunks, leading to more logical, accurate, and reliable reasoning.
-4. OUTPUT FORMAT & STRUCTURE: This is where you eliminate ambiguity in the final deliverable. Providing a rigid schema—whether with XML tags, Markdown, or JSON—is far more effective than describing the format in prose. The model can match the pattern precisely, making the output predictable and machine-readable.
-5. CONSTRAINTS & GUARDRAILS: This section sets the hard rules. Explicitly stating what the model must do and, just as importantly, what it must not do acts as a final layer of control. Negative constraints (DO NOT...) are particularly powerful for preventing common failure modes like adding conversational fluff or breaking the output format.
-6. EXAMPLE (FEW-SHOT PROMPT): This is arguably the most powerful component. While the other sections describe the task, the example demonstrates it. Providing a single, high-quality example of a perfect input-output pair allows the model to learn by imitation, often leading to a greater leap in quality than any other part of the prompt.
+
+1. **ROLE & MISSION**: This is the foundation. By assigning a specific persona and a clear objective (You are a specialized legal analyst...), you move the AI from a generalist model to a focused specialist. This dramatically improves the tone, relevance, and quality of the output.
+2. **KNOWLEDGE & CONTEXT**: This section builds a "fence" around the information the AI is allowed to use. Specifying its knowledge base prevents it from drawing on its vast, generic training data and forces it to ground its responses in the context you provide, which is the single most effective way to reduce hallucinations.
+3. **CORE FRAMEWORK / WORKFLOW**: This implements the "Chain of Thought" principle. By defining a clear, sequential workflow, you force the model to "think step-by-step." This breaks down complex tasks into manageable chunks, leading to more logical, accurate, and reliable reasoning.
+4. **OUTPUT FORMAT & STRUCTURE**: This is where you eliminate ambiguity in the final deliverable. Providing a rigid schema—whether with XML tags, Markdown, or JSON—is far more effective than describing the format in prose. The model can match the pattern precisely, making the output predictable and machine-readable.
+5. **CONSTRAINTS & GUARDRAILS**: This section sets the hard rules. Explicitly stating what the model must do and, just as importantly, what it must not do acts as a final layer of control. Negative constraints (DO NOT...) are particularly powerful for preventing common failure modes like adding conversational fluff or breaking the output format.
+6. **EXAMPLE (FEW-SHOT PROMPT)**: This is arguably the most powerful component. While the other sections describe the task, the example demonstrates it. Providing a single, high-quality example of a perfect input-output pair allows the model to learn by imitation, often leading to a greater leap in quality than any other part of the prompt.
 
